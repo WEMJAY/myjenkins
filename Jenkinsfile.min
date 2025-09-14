@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo "Hello from the minimal Jenkins pipeline!"
+            }
+        }
+    }
+    post {
+        always {
+            echo "Pipeline finished."
+        }
+    }
+}
